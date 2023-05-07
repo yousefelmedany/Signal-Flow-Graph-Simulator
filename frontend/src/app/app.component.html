@@ -1,0 +1,42 @@
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
+/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<div class="container">
+  <section class="tools">
+    <div class="row">
+      <label class="title">Signal Flow Graph</label>
+      <ul class="options">
+        <li class="option">
+          <button id="addBtn" (click)="drawcircle()" style="font-size: larger">
+            Add Node <i class="fa-solid fa-plus"></i>
+          </button>
+        </li>
+      </ul>
+      <input
+        (blur)="get_value(product.value)"
+        id="input1"
+        type="text"
+        placeholder="Enter Value "
+        #product
+      />
+      <input
+        (blur)="get_destination_node(destination.value)"
+        id="input2"
+        type="text"
+        placeholder="Enter Destination node"
+        #destination
+      />
+      <button class="btn btn-primary" id="simulate-btn" (click)="Run()">
+        RUN <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </section>
+
+  <section id="board"></section>
+</div>
